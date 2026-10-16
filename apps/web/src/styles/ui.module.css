@@ -1,0 +1,147 @@
+.panel {
+  position: relative;
+  background: var(--paper);
+  border: var(--bd-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 14px;
+  border: var(--bd);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.15s var(--spring),
+    box-shadow 0.15s ease-out;
+}
+
+.button:hover:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.button:active:not(:disabled) {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: var(--shadow-sm);
+}
+
+.primary {
+  background: var(--banana);
+}
+
+.danger {
+  background: var(--coral);
+}
+
+.ghost {
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+}
+
+.ghost:hover:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: var(--bd);
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+  outline: none;
+  box-shadow: var(--shadow-sm);
+  transition:
+    background 0.15s ease,
+    transform 0.15s var(--spring);
+}
+
+.input::placeholder {
+  color: #7a7a7a;
+  font-weight: 500;
+}
+
+.input:focus {
+  background: #fffbe0;
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  white-space: nowrap;
+}
+
+.segmented {
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 14px;
+  background: var(--paper);
+  border: var(--bd);
+  box-shadow: var(--shadow-sm);
+}
+
+.segment {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background: transparent;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+
+.segment:hover {
+  background: var(--bg);
+}
+
+.segmentActive,
+.segmentActive:hover {
+  background: var(--banana);
+  border-color: var(--ink);
+}
