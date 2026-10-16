@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Decor } from './components/Decor';
+import { ReportButton } from './components/ReportButton';
 import { useClient } from './net/context';
 import { GameOver } from './screens/GameOver';
 import { Home } from './screens/Home';
@@ -47,6 +48,7 @@ export function App() {
     <>
       <Decor />
       {screen}
+      <ReportButton game="petitbac" context={{ room: view?.code, phase: view?.phase ?? 'HOME' }} />
       <div className={styles.toasts} aria-live="polite">
         {closed ? (
           <div className={`${styles.toast} ${styles.error}`} role="alert">
